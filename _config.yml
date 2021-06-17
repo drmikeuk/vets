@@ -1,0 +1,23 @@
+# Site settings
+title: "VetsRef"
+baseurl: "" # the subpath of your site, e.g. /blog
+#url: "http://yourdomain.com" # the base hostname & protocol for your site
+port: 			  4123
+
+# Build settings
+#markdown: kramdown
+exclude: ["README.md"]
+
+#source "https://rubygems.org"
+#gem "github-pages", group: :jekyll_plugins
+
+# jeklhttps://github.com/inukshuk/jekyll-scholar
+plugins: ['jekyll/scholar']
+
+scholar:
+  source: ./_bibliography
+  bibliography: vetsrevdemo.bib
+  #bibliography: vetsrevtest.bib
+  sort_by: year
+  bibliography_list_tag: ul
+  details_link: <i class="fas fa-chevron-circle-right"></i>

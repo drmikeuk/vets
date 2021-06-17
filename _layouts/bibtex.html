@@ -1,0 +1,34 @@
+---
+layout: page
+---
+
+<div class="publication">
+  <h1>{{ page.entry.title }}</h1>
+  <h2>{{ page.entry.author }}</h2>
+
+  <p>{{ page.entry.journal }} ({{ page.entry.year }}) {{ page.entry.volume }}: {{ page.entry.pages }}</p>
+
+  {% if page.entry.doi %}
+  <p>DOI: <a href="{{ page.entry.doi | prepend: 'https://doi.org/' }}">{{ page.entry.doi }}</a></p>
+  {% elsif page.entry.url %}
+  <p>Link: <a href="{{ page.entry.url }}">{{ page.entry.url }}</a></p>
+  {% endif %}
+
+
+  <h2>Abstract</h2>
+  <p>{{ page.entry.abstract }}</p>
+
+
+  <h2>Citation</h2>
+  <p>{% reference page.entry.key %} </p>
+
+
+  <h2>Keywords</h2>
+  <ul>
+    {% assign keywords = page.entry.keywords | split: ", " %}
+    {% for keyword in keywords %}
+      <li>{{ keyword }}</li>
+    {% endfor %}
+  </ul>
+
+</div>
