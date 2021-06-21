@@ -6,7 +6,9 @@ layout: page
   <h1>{{ page.entry.title }}</h1>
   <h2>{{ page.entry.author }}</h2>
 
+  {% if page.entry.journal %}
   <p>{{ page.entry.journal }} ({{ page.entry.year }}) {{ page.entry.volume }}: {{ page.entry.pages }}</p>
+  {% endif %}
 
   {% if page.entry.doi %}
   <p>DOI: <a href="{{ page.entry.doi | prepend: 'https://doi.org/' }}">{{ page.entry.doi }}</a></p>
@@ -14,10 +16,10 @@ layout: page
   <p>Link: <a href="{{ page.entry.url }}">{{ page.entry.url }}</a></p>
   {% endif %}
 
-
+  {% if page.entry.abstract %}
   <h2>Abstract</h2>
   <p>{{ page.entry.abstract }}</p>
-
+  {% endif %}
 
   <h2>Citation</h2>
   <p>{% reference page.entry.key %} </p>

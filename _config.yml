@@ -18,6 +18,6 @@ scholar:
   source: ./_bibliography
   bibliography: vetsrevdemo.bib
   #bibliography: vetsrevtest.bib
-  sort_by: year
+  sort_by: year,author
   bibliography_list_tag: ul
   details_link: <i class="fas fa-chevron-circle-right"></i>
