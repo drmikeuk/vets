@@ -1,7 +1,7 @@
 # Site settings
-title: "VetsRef"
+title: "VetSRev"
 baseurl: "" # the subpath of your site, e.g. /blog
-#url: "http://yourdomain.com" # the base hostname & protocol for your site
+#url: "https://vetsrev.mikegardner.me.uk" # the base hostname & protocol for your site
 port: 			  4123
 
 # Build settings
