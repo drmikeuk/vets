@@ -16,9 +16,11 @@ plugins: ['jekyll/scholar']
 
 scholar:
   source: ./_bibliography
-  #bibliography: vetsrevdemo.bib
-  bibliography: vetsrevtest.bib
+  style: ./_bibliography/apakeywords.csl
+  bibliography: vetsrevdemo.bib
+  #bibliography: vetsrevtest.bib
+  #bibliography: hgf.bib
   sort_by: year,author
   order: descending,ascending
   bibliography_list_tag: ul
-  details_link: <i class="fas fa-chevron-circle-right"></i>
+  details_link: <i></i>

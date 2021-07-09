@@ -25,12 +25,13 @@ body          {font-family: 'Roboto', sans-serif;}
 .form-inline .form-control   {width: 300px}
 
 .bibliography                {list-style: none; padding-left: 0}
-.bibliography li             {margin-left: 3em; text-indent: -3em;padding-bottom: 0.85rem; position: relative}
+.bibliography li             {margin-left: 3em; text-indent: -3em; padding-bottom: 0.85rem; position: relative}
 .bibliography                {padding-top: 1rem}
 .bibliography a              {color: black}
-.bibliography .fas           {padding-left: 0.5em; color: blue}
+.bibliography li b           {display: none; /* hides keywords but can still filter on */}
+.details i                   {display: none; /* hides link text */}
 /* expand link to whole parent LI */
-.details ::before  {
+.details::before  {
   content: " ";
   position: absolute;
   top: 0;
@@ -41,10 +42,12 @@ body          {font-family: 'Roboto', sans-serif;}
 .bibliography li:hover      {text-decoration: underline;}
 
 
+
+
 /* publication */
 .publication h1    {font-size: 2rem; font-weight: 300; margin-bottom: 1rem}
 .publication h2    {font-size: 1.5rem; font-weight: 300}
-
+.citation b        {display: none; /* hides keywords (required for filters) */}
 
 
 
