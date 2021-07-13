@@ -1,14 +1,14 @@
 /* my styles */
 body          {font-family: 'Roboto', sans-serif;}
-.header       {margin-bottom: 1.5em; height: 90px; }
+.header       {margin-bottom: 1em; }
 .footer       {background: #efefef; padding: 20px;  margin: 2em 0; border-top: 1px solid #434341;}
 
-.header img   {float: left;  margin-right: 4em}
-.title        {height: 90px; padding-top: 15px}
-.title h1     {font-size: 60px; line-height: 50px; font-weight: 100; letter-spacing: 2px; margin-bottom: 0; }
+.header img   {max-width: 100%}
+.title        {padding-top: 10px}
+.title h1     {font-size: 50px; font-weight: 100; letter-spacing: 2px; margin-bottom: 0; }
 .title p      {font-size: 18px; font-weight: 300; margin-bottom: 0}
 
-.navbar       {margin-bottom: 2em;}
+.navbar       {margin-bottom: 1.5em;}
 .bg-light     {background-color: #EFEFEF!important;}
 .navbar-expand-lg .navbar-nav .nav-link {padding-right: 1.5rem; }
 .navbar-light .navbar-nav .nav-link     {color: #1a296b}
@@ -22,10 +22,12 @@ body          {font-family: 'Roboto', sans-serif;}
 /* bibliography */
 .form-inline ::placeholder   {font-style: italic;}
 .form-inline                 {justify-content: flex-end;}
-.form-inline .form-control   {width: 300px}
+.form-inline                 {margin-bottom: 1em}
+.form-inline .form-control   {width: 40%}
+.form-inline span            {margin-left: 1.5em; font-weight: bold; margin-right: 5px}
 
 .bibliography                {list-style: none; padding-left: 0}
-.bibliography li             {margin-left: 3em; text-indent: -3em; padding-bottom: 0.85rem; position: relative}
+.bibliography li             {margin-left: 1em; text-indent: -1em; padding-bottom: 0.85rem; position: relative}
 .bibliography                {padding-top: 1rem}
 .bibliography a              {color: black}
 .bibliography li b           {display: none; /* hides keywords but can still filter on */}
@@ -41,7 +43,10 @@ body          {font-family: 'Roboto', sans-serif;}
 }
 .bibliography li:hover      {text-decoration: underline;}
 
-
+.pagination li              { display:inline-block; padding:5px 10px; border: 1px solid #ccc}
+.pagination .active         {background: #eee}
+.pagination .disabled a      {color: #ccc}
+.pagination .disabled a:hover {text-decoration: none; cursor: default}
 
 
 /* publication */
@@ -84,7 +89,29 @@ body          {font-family: 'Roboto', sans-serif;}
 
 
 
+/* MEDIUM DEVICES */
+@media (min-width:  768px) {
+  .header       {margin-bottom: 1.5em; height: 72px; }
+  .header img   {float: left;  margin-right: 3em; max-width: 50%}
+  .title        {padding-top: 12px}
+  .title h1     {font-size: 45px; line-height: 42px; font-weight: 100; letter-spacing: 2px; margin-bottom: 0; }
+  .title p      {font-size: 14px; font-weight: 300; margin-bottom: 0}
 
+  .navbar       {margin-bottom: 1.5em;}
+
+  .bibliography li             {margin-left: 3em; text-indent: -3em; padding-bottom: 0.85rem; position: relative}
+}
+
+/* LARGE DEVICES */
+@media (min-width:  992px) {
+  .header       {height: 90px; }
+  .header img   {margin-right: 4em; max-width: 100%}
+  .title        {padding-top: 15px}
+  .title h1     {font-size: 60px; line-height: 50px;}
+  .title p      {font-size: 18px;}
+
+  .form-inline .form-control   {width: 300px}
+}
 
 
 /*
