@@ -17,10 +17,10 @@ plugins: ['jekyll/scholar']
 scholar:
   source: ./_bibliography
   style: ./_bibliography/apakeywords.csl
-  #bibliography: vetsrevdemo.bib
-  bibliography: vetsrevtest.bib
+  bibliography: vetsrevdemo.bib
+  #bibliography: vetsrevtest.bib
   #bibliography: hgf.bib
   sort_by: year,author
   order: descending,ascending
   bibliography_list_tag: ul
-  details_link: <i></i>
+  details_link: <i>View</i>
