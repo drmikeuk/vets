@@ -20,7 +20,7 @@ opendir(DIR, "_create");
 @files = grep(/\.bib$/,readdir(DIR));
 closedir(DIR);
 
-foreach $file (@files) {
+foreach $file (sort @files) {
    $pathFile = "_create/" . $file;
    print "\nfound $pathFile\n";
    print "================================\n";
@@ -54,7 +54,7 @@ while (<$in>)
     @files = grep(/\.html$/,readdir(DIR));
     closedir(DIR);
     print "\nmerge in ...\n";
-    foreach $file (@files) {
+    foreach $file (sort @files) {
       print ("- " . $file . "\n");
       open my $add,  '<', "_create/_temp/" . $file;
       while (my $line = <$add>)
