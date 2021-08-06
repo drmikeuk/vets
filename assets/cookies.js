@@ -61,14 +61,14 @@
     // vets = UA-921739-25
     function enableAnalytics (){
       $.ajax({
-        url: "https://www.googletagmanager.com/gtag/js?id=UA-921739-25XX",
+        url: "https://www.googletagmanager.com/gtag/js?id=UA-921739-25",
         dataType: "script",
         cache: true,
         success: function() {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'UA-921739-25xx');
+          gtag('config', 'UA-921739-25');
           //console.log("tag Google Analytics pageload");
         }
       });

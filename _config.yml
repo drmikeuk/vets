@@ -6,10 +6,11 @@ port: 			  4123
 
 # Build settings
 #markdown: kramdown
-exclude: ["README.md"]
+exclude:
+  - README.md
+  - _create
 
-#source "https://rubygems.org"
-#gem "github-pages", group: :jekyll_plugins
+keep_files: [bibliography]
 
 # https://github.com/inukshuk/jekyll-scholar
 plugins: ['jekyll/scholar']
@@ -17,10 +18,13 @@ plugins: ['jekyll/scholar']
 scholar:
   source: ./_bibliography
   style: ./_bibliography/apakeywords.csl
-  bibliography: vetsrevdemo.bib
+  bibliography: vetsrev.bib
+  #bibliography: vetsrevdemo.bib
   #bibliography: vetsrevtest.bib
   #bibliography: hgf.bib
-  sort_by: year,author
-  order: descending,ascending
+  #sort_by: year,author
+  #order: descending,ascending
+  sort_by: author
+  order: ascending
   bibliography_list_tag: ul
   details_link: <i>View</i>
