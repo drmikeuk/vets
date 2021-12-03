@@ -41,7 +41,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="{{ "/about.html" | prepend: site.baseurl }}">About the database</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ "/about.html" | prepend: site.baseurl }}">About VetSRev</a></li>
         </ul>
       </div>
     </nav>
@@ -109,6 +109,9 @@
   <script src="{{ "/vendor/list.min.js" | prepend: site.baseurl }}"></script>
   <script>
   $(document).ready(function(){
+    // open links in new window - target=”_blank”  .attr('target','_blank')
+    $(".details").attr('target','_blank');
+
     // filter and paginate using https://listjs.com/
     // lists.js wants to identify items by class so add one
     $(".bibliography li span").addClass("citation")
@@ -116,10 +119,11 @@
     var options = {
       valueNames: [ 'citation' ],
       listClass: "bibliography",
-      page: 10,
-      pagination: true,
-      innerWindow: 1,
-      outerWindow: 1
+      page: 50,
+      pagination: [{
+        innerWindow: 2,
+        outerWindow: 1
+      }]
     }
     var citationsList = new List('bibliographyBlock', options);
 

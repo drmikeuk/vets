@@ -49,7 +49,7 @@ while (<$in>)
 {
   if (/<!-- put bibliography here -->/) {
     # grab temp files and add here
-    print $out "\n\n...new stuff here...\n\n";
+    #print $out "\n\n...new stuff here...\n\n";
     opendir(DIR, "_create/_temp");
     @files = grep(/\.html$/,readdir(DIR));
     closedir(DIR);
