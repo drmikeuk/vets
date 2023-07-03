@@ -58,17 +58,17 @@
 
 
     // Enable Google Analytics (only called if accepted)
-    // vets = UA-921739-25
+    // vets = was UA-921739-25 now G-DE1K147393
     function enableAnalytics (){
       $.ajax({
-        url: "https://www.googletagmanager.com/gtag/js?id=UA-921739-25",
+        url: "https://www.googletagmanager.com/gtag/js?id=G-DE1K147393",
         dataType: "script",
         cache: true,
         success: function() {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'UA-921739-25');
+          gtag('config', 'G-DE1K147393');
           //console.log("tag Google Analytics pageload");
         }
       });

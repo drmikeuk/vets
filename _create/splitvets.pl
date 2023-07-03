@@ -3,7 +3,7 @@
 ## splitvets - split bib file into chunks so can build one at a time
 ## run from `vets`
 
-$input = "_create/_sourceBibs/vetsrevdemo.bib";
+$input = "_create/_sourceBibs/vetsrev.bib";
 ##$input = "_create/_sourceBibs/testsplit.bib";
 
 print "splitvets - split bib file into chunks so can build one at a time\n\n";

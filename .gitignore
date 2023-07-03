@@ -1,2 +1,4 @@
 _site
 .jekyll-cache
+_create/*.bib
+_create/_temp/*
